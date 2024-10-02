@@ -1,0 +1,91 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #eaeaea; /* Fondo claro */
+    color: #000000; /* Texto oscuro */
+}
+
+h1 {
+    text-align: center;
+    color: #000000; /* Rojo vibrante */
+    font-size: 3em; /* Tamaño grande */
+    margin-bottom: 20px; /* Espacio debajo del encabezado */
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para efecto */
+}
+
+h2 {
+    color: #000000; /* Negro */
+    margin-bottom: 10px; /* Espacio debajo del encabezado */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    font-weight: bold; /* Texto en negrita */
+}
+
+.equipo {
+    background-color: #ffffff; /* Fondo blanco */
+    border: 1px solid #ddd; /* Borde suave */
+    border-radius: 10px; /* Esquinas más redondeadas */
+    padding: 20px; /* Espaciado interno */
+    margin: 20px 0; /* Espaciado externo */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #000000; /* Color de texto */
+    font-weight: bold; /* Texto en negrita */
+}
+
+input[type="number"] {
+    width: 100%; /* Ancho completo */
+    padding: 12px; /* Espaciado interno */
+    margin-bottom: 15px; /* Espaciado inferior */
+    border: 1px solid #ccc; /* Borde suave */
+    border-radius: 4px; /* Esquinas redondeadas */
+    background-color: #f9f9f9; /* Fondo claro para la entrada */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+}
+
+input[type="number"]:focus {
+    border-color: #25109b; /* Borde rojo al enfocar */
+    box-shadow: 0 0 5px rgba(40, 14, 189, 0.5); /* Sombra roja al enfocar */
+    outline: none; /* Sin contorno */
+}
+
+button {
+    background-color: #180a9b; /* Negro */
+    color: #ffffff; /* Texto rojo */
+    border: none; /* Sin borde */
+    padding: 12px; /* Espaciado interno */
+    border-radius: 4px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cursor de mano al pasar el mouse */
+    width: 100%; /* Botón ocupa todo el ancho */
+    font-size: 1em; /* Tamaño de fuente adecuado */
+    font-weight: bold; /* Texto en negrita */
+    transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
+}
+
+button:hover {
+    background-color: #180570; /* Rojo al pasar el mouse */
+    color: white; /* Texto blanco al pasar el mouse */
+    transform: scale(1.05); /* Efecto de crecimiento */
+}
+
+#MR {
+    margin-top: 20px;
+    display: block;
+    max-width: 300px; /* Ancho máximo */
+    margin-left: auto;
+    margin-right: auto; /* Centrando el elemento */
+}
+
+#resultado {
+    margin-top: 20px;
+    font-weight: bold; /* Texto en negrita */
+    text-align: center; /* Alinear al centro */
+    font-size: 1.5em; /* Tamaño de fuente mayor */
+    color: #2713db; /* Rojo para resultados */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Sombra de texto */
+}

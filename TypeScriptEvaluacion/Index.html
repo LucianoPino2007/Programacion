@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDP INTERTRIBUS 2024</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <H1>CONTADOR DE PUNTOS INTERTRIBUS 2024</H1>
+    </header>
+    <div class="equipoA">
+        <h2>EQUIPO A</h2>
+        <label for="Handball">Handball</label>
+        <input type="number" id="handball">
+
+        <label for="Futbol">Futbol</label>
+        <input type="number" id="Futbol">
+        
+        <label for="Ajedrez">Ajedrez</label>
+        <input type="number" id="Ajedrez">
+
+        <button onclick="AgregarPuntos(equipoA)">Agregar Puntos</button>
+    
+    </div>
+
+    <div class="equipo B">
+        <h2>EQUIPO B</h2>
+        <label for="Handball">Handball</label>
+        <input type="number" id="handball">
+
+        <label for="Futbol">Futbol</label>
+        <input type="number" id="Futbol">
+        
+        <label for="Ajedrez">Ajedrez</label>
+        <input type="number" id="Ajedrez">
+    
+        <button onclick="AgregarPuntos(equipoB)">Agregar Puntos</button>
+
+    </div>
+
+    <div>
+        <button id="MR" onclick="MostrarResultados()">Mostrar Resultados</button>
+        <p id="resultado"></p>
+    </div>
+    <script src="Inters.JS"></script>
+</body>
+</html>
