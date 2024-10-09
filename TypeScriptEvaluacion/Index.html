@@ -8,37 +8,44 @@
 </head>
 <body>
     <header>
-    <H1>CONTADOR DE PUNTOS INTERTRIBUS 2024</H1>
+        <h1>CONTADOR DE PUNTOS INTERTRIBUS 2024</h1>
     </header>
-    <div class="equipoA">
-        <h2>EQUIPO A</h2>
-        <label for="Handball">Handball</label>
-        <input type="number" id="handball">
 
-        <label for="Futbol">Futbol</label>
-        <input type="number" id="Futbol">
+    <div class="equipos">
+
+
+        <div class="contenedor-equipos">
+            <div class="equipoA">
+                <h2>TRIBU NEGRA</h2>
+                <label for="handballA">Handball</label>
+                <input type="number" id="handballA">
         
-        <label for="Ajedrez">Ajedrez</label>
-        <input type="number" id="Ajedrez">
-
-        <button onclick="AgregarPuntos(equipoA)">Agregar Puntos</button>
-    
+                <label for="futbolA">Futbol</label>
+                <input type="number" id="futbolA">
+        
+                <label for="ajedrezA">Ajedrez</label>
+                <input type="number" id="ajedrezA">
+        
+                <button onclick="AgregarPuntos('A')">Agregar Puntos</button>
+            </div>
+        
+            <div class="equipoB">
+                <h2>TRIBU ROJA</h2>
+                <label for="handballB">Handball</label>
+                <input type="number" id="handballB">
+        
+                <label for="futbolB">Futbol</label>
+                <input type="number" id="futbolB">
+        
+                <label for="ajedrezB">Ajedrez</label>
+                <input type="number" id="ajedrezB">
+        
+                <button onclick="AgregarPuntos('B')">Agregar Puntos</button>
+            </div>
+        </div>
+        
     </div>
 
-    <div class="equipo B">
-        <h2>EQUIPO B</h2>
-        <label for="Handball">Handball</label>
-        <input type="number" id="handball">
-
-        <label for="Futbol">Futbol</label>
-        <input type="number" id="Futbol">
-        
-        <label for="Ajedrez">Ajedrez</label>
-        <input type="number" id="Ajedrez">
-    
-        <button onclick="AgregarPuntos(equipoB)">Agregar Puntos</button>
-
-    </div>
 
     <div>
         <button id="MR" onclick="MostrarResultados()">Mostrar Resultados</button>
