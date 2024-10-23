@@ -5,8 +5,8 @@
     /* Colores */
     --bg-color: #f9f9f9; /* Fondo claro */
     --text-color: #2c2c2c; /* Texto oscuro */
-    --primary-color: #6200ee; /* Color principal */
-    --hover-color: #3700b3; /* Color en hover */
+    --primary-color: #580101; /* Color principal */
+    --hover-color: #750404; /* Color en hover */
     --border-color: #e0e0e0; /* Color de borde */
     --shadow-color: rgba(0, 0, 0, 0.1); /* Sombra suave */
 
@@ -90,7 +90,6 @@ button:hover {
     max-width: 300px;
     margin-left: auto;
     margin-right: auto;
-    width: 200;
 }
 
 #resultado {
@@ -109,7 +108,14 @@ button:hover {
     margin: 20px auto; /* Centra el contenedor */
 }
 
-.equipoA, .equipoB {
+.TribuNegra, .TribuRoja {
     flex: 1; /* Hace que ambos equipos ocupen espacio igual */
     margin: 0 50px; /* Espacio lateral entre equipos */
+}
+
+#puntosnegra{
+    background-color: #000000;
+}
+#puntosroja{
+    background-color: red;
 }
