@@ -7,7 +7,7 @@ interface Points {
 
 const Points: Points = {
     handball: { A: 0, B: 0 },
-    futbol: { A: 0, B: 0 },  // Cambié resistencia por futbol
+    futbol: { A: 0, B: 0 },  
     ajedrez: { A: 0, B: 0 }
 };
 
