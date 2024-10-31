@@ -5,8 +5,8 @@
     /* Colores */
     --bg-color: #f9f9f9; /* Fondo claro */
     --text-color: #2c2c2c; /* Texto oscuro */
-    --primary-color: #580101; /* Color principal */
-    --hover-color: #750404; /* Color en hover */
+    --primary-color: #1202a8; /* Color principal */
+    --hover-color: #110797; /* Color en hover */
     --border-color: #e0e0e0; /* Color de borde */
     --shadow-color: rgba(0, 0, 0, 0.1); /* Sombra suave */
 
@@ -94,7 +94,6 @@ button:hover {
 
 #resultado {
     margin-top: 20px;
-    font-weight: bold;
     text-align: center;
     font-size: 1.5em;
     color: var(--primary-color);

@@ -1,22 +1,23 @@
 var Points = {
     handball: { A: 0, B: 0 },
-    resistencia: { A: 0, B: 0 },
+    futbol: { A: 0, B: 0 }, // Cambié resistencia por futbol
     ajedrez: { A: 0, B: 0 }
 };
-document.getElementById('register').addEventListener('click', function () {
-    var discipline = document.getElementById('discipline').value;
-    var team = document.getElementById('team').value;
-    var pointsInput = parseInt(document.getElementById('points').value, 10);
-    if (!isNaN(pointsInput) && pointsInput >= 0) {
-        Points[discipline][team] += pointsInput;
-        document.getElementById("".concat(discipline).concat(team)).innerText = Points[discipline][team].toString();
-        subiresultados();
-    }
-    else {
-        alert("Por favor, introduce un número de puntos válido.");
-    }
-});
-function subiresultados() {
+function AgregarPuntos(team) {
+    var disciplines = ['handball', 'futbol', 'ajedrez'];
+    disciplines.forEach(function (discipline) {
+        var input = document.getElementById("".concat(discipline).concat(team));
+        var pointsInput = parseInt(input.value, 10);
+        if (!isNaN(pointsInput) && pointsInput >= 0) {
+            Points[discipline][team] += pointsInput;
+            input.value = '0'; // Resetear el input después de agregar puntos
+        }
+        else {
+            alert("Por favor, introduce un número de puntos válido.");
+        }
+    });
+}
+function MostrarResultados() {
     var totalA = 0;
     var totalB = 0;
     var highestPoints = 0;
@@ -33,6 +34,7 @@ function subiresultados() {
             highestDiscipline = "Equipo B en ".concat(discipline);
         }
     }
-    console.log("Total puntos Equipo A: ".concat(totalA));
-    console.log("Total puntos Equipo B: ".concat(totalB));
+    // Mostrar resultados en el HTML
+    var resultadoElement = document.getElementById('resultado');
+    resultadoElement.innerText = "\n        Total puntos Tribu Negra: ".concat(totalA, "\n        Total puntos Tribu Roja: ").concat(totalB, "\n        Mayor puntuaci\u00F3n: ").concat(highestPoints, "\n    ");
 }

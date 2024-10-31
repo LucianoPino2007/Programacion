@@ -7,26 +7,27 @@ interface Points {
 
 const Points: Points = {
     handball: { A: 0, B: 0 },
-    resistencia: { A: 0, B: 0 },
+    futbol: { A: 0, B: 0 },  // Cambié resistencia por futbol
     ajedrez: { A: 0, B: 0 }
 };
 
-document.getElementById('register')!.addEventListener('click', () => {
-    const discipline = (document.getElementById('discipline') as HTMLSelectElement).value;
-    const team = (document.getElementById('team') as HTMLSelectElement).value;
-    const pointsInput = parseInt((document.getElementById('points') as HTMLInputElement).value, 10);
+function AgregarPuntos(team: 'A' | 'B') {
+    const disciplines = ['handball', 'futbol', 'ajedrez'];
+    
+    disciplines.forEach(discipline => {
+        const input = document.getElementById(`${discipline}${team}`) as HTMLInputElement;
+        const pointsInput = parseInt(input.value, 10);
+        
+        if (!isNaN(pointsInput) && pointsInput >= 0) {
+            Points[discipline][team] += pointsInput;
+            input.value = '0'; // Resetear el input después de agregar puntos
+        } else {
+            alert("Por favor, introduce un número de puntos válido.");
+        }
+    });
+}
 
-    if (!isNaN(pointsInput) && pointsInput >= 0) {
-        Points[discipline][team] += pointsInput;
-        (document.getElementById(`${discipline}${team}`) as HTMLElement).innerText = Points[discipline][team].toString();
-
-        subiresultados();
-    } else {
-        alert("Por favor, introduce un número de puntos válido.");
-    }
-});
-
-function subiresultados() {
+function MostrarResultados() {
     let totalA = 0;
     let totalB = 0;
     let highestPoints = 0;
@@ -46,10 +47,11 @@ function subiresultados() {
         }
     }
 
-    
-    console.log(`Total puntos Equipo A: ${totalA}`);
-    console.log(`Total puntos Equipo B: ${totalB}`);
-
-
-
+    // Mostrar resultados en el HTML
+    const resultadoElement = document.getElementById('resultado') as HTMLElement;
+    resultadoElement.innerText = `
+        Total puntos Tribu Negra: ${totalA}
+        Total puntos Tribu Roja: ${totalB}
+        Mayor puntuación: ${highestPoints}
+    `;
 }
