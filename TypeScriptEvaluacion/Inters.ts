@@ -21,8 +21,6 @@ function AgregarPuntos(team: 'A' | 'B') {
         if (!isNaN(pointsInput) && pointsInput >= 0) {
             Points[discipline][team] += pointsInput;
             input.value = '0'; // Resetear el input después de agregar puntos
-        } else {
-            alert("Por favor, introduce un número de puntos válido.");
         }
     });
 }
