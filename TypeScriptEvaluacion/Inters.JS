@@ -1,6 +1,6 @@
 var Points = {
     handball: { A: 0, B: 0 },
-    futbol: { A: 0, B: 0 }, // Cambié resistencia por futbol
+    futbol: { A: 0, B: 0 },
     ajedrez: { A: 0, B: 0 }
 };
 function AgregarPuntos(team) {
@@ -11,9 +11,6 @@ function AgregarPuntos(team) {
         if (!isNaN(pointsInput) && pointsInput >= 0) {
             Points[discipline][team] += pointsInput;
             input.value = '0'; // Resetear el input después de agregar puntos
-        }
-        else {
-            alert("Por favor, introduce un número de puntos válido.");
         }
     });
 }

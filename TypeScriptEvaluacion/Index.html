@@ -8,62 +8,53 @@
 </head>
 <body>
 
-
-
     <header>
         <h1>CONTADOR DE PUNTOS INTERTRIBUS 2024</h1>
     </header>
 
-
-
     <main>
         <div class="equipos">
             <div class="contenedor-equipos">
+                <!-- Tribu Negra -->
                 <div class="TribuNegra">
                     <h2>TRIBU NEGRA</h2>
                     <label for="handballA">Handball</label>
                     <input type="number" id="handballA" value="0" placeholder="puntos">
-            
+
                     <label for="futbolA">Futbol</label>
                     <input type="number" id="futbolA" value="0" placeholder="puntos">
-            
+
                     <label for="ajedrezA">Ajedrez</label>
                     <input type="number" id="ajedrezA" value="0" placeholder="puntos">
-            
+
                     <button onclick="AgregarPuntos('A')" id="puntosnegra">Agregar Puntos</button>
                 </div>
-        
 
-
-
+                <!-- Tribu Roja -->
                 <div class="TribuRoja">
                     <h2>TRIBU ROJA</h2>
                     <label for="handballB">Handball</label>
                     <input type="number" id="handballB" value="0" placeholder="puntos">
-        
+
                     <label for="futbolB">Futbol</label>
-                    <input type="number" id="resistenciaA" value="0" placeholder="puntos">
-        
+                    <input type="number" id="futbolB" value="0" placeholder="puntos">
+
                     <label for="ajedrezB">Ajedrez</label>
                     <input type="number" id="ajedrezB" value="0" placeholder="puntos">
-        
+
                     <button onclick="AgregarPuntos('B')" id="puntosroja">Agregar Puntos</button>
-                    <p id="resultado"></p>
                 </div>
             </div>
         </div>
     </main>
 
-
-
-
+    <!-- Botón para mostrar los resultados -->
     <div>
         <button id="MR" onclick="MostrarResultados()">Mostrar Resultados</button>
-        <p id="resultado"></p>
+        <p id="resultado"></p> <!-- Este es el único ID "resultado" en la página -->
     </div>
-    <script src="Inters.js"></script> 
 
-
+    <script src="Inters.js"></script> <!-- Asegúrate de que el archivo JS esté correctamente vinculado -->
 
 </body>
 </html>
